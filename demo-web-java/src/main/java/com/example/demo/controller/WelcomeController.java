@@ -1,6 +1,6 @@
-package com.example.demowebjava.controller;
+package com.example.demo.controller;
 
-import com.example.demowebjava.security.CustomUserDetails;
+import com.example.demo.security.CustomUserDetails;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

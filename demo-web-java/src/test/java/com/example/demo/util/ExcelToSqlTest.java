@@ -1,4 +1,4 @@
-package com.example.demowebjava.util;
+package com.example.demo.util;
 
 import org.junit.Ignore;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.example.demowebjava.util;
+package com.example.demo.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,7 +21,6 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@SuppressWarnings(value = { "PMD.UseSingleton", "PMD.CyclomaticComplexity", "PMD.NPathComplexity" })
 public final class ExcelToSql {
 
   private static final String DEFAULT_DATA_CELL_COLOR_HEX = "FFFFFF00";

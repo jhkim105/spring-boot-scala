@@ -1,4 +1,4 @@
-package com.example.demowebjava.model;
+package com.example.demo.model;
 
 public enum Authority {
   ADMIN, USER

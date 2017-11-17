@@ -1,13 +1,10 @@
-package com.example.demowebjava.repository;
+package com.example.demo.repository;
 
-import com.example.demowebjava.DemoWebJavaApplicationTests;
+import com.example.demo.DemoWebJavaApplicationTests;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 public class UserRepositoryTest extends DemoWebJavaApplicationTests {
 

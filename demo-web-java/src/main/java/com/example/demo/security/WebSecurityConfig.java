@@ -1,6 +1,6 @@
-package com.example.demowebjava.security;
+package com.example.demo.security;
 
-import com.example.demowebjava.model.Authority;
+import com.example.demo.model.Authority;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,7 +1,7 @@
-package com.example.demowebjava.repository;
+package com.example.demo.repository;
 
-import com.example.demowebjava.model.QUser;
-import com.example.demowebjava.model.User;
+import com.example.demo.model.QUser;
+import com.example.demo.model.User;
 import com.querydsl.jpa.impl.JPAQuery;
 
 import javax.persistence.EntityManager;

@@ -1,6 +1,6 @@
-package com.example.demowebjava.security;
+package com.example.demo.security;
 
-import com.example.demowebjava.model.User;
+import com.example.demo.model.User;
 import lombok.Getter;
 import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
