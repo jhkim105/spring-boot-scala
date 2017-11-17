@@ -6,7 +6,9 @@ import org.springframework.security.core.userdetails.{UserDetails, UserDetailsSe
 import org.springframework.transaction.annotation.Transactional
 
 class CustomUserDetailsService  extends UserDetailsService {
-  @Autowired var userRepository: UserRepository = null
+  @Autowired
+  var userRepository: UserRepository = null
+
   @Transactional(readOnly = true)
   @throws[UsernameNotFoundException]
   override def loadUserByUsername(username: String): UserDetails = {

@@ -15,12 +15,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     return new CustomUserDetailsService();
   }
   protected void configure(HttpSecurity http) throws Exception {
-    http
-        .authorizeRequests()
+    http.authorizeRequests()
           .antMatchers("/resources/**", "/storage/**").permitAll()
           .antMatchers("/").hasAnyAuthority(Authority.ADMIN.name(), Authority.USER.name())
-        .anyRequest().authenticated()
-        .and()
+        .anyRequest().authenticated().and()
         .formLogin().loginPage("/login").permitAll().and()
         .csrf().disable();
   }

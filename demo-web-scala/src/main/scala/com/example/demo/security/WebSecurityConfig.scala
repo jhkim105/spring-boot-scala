@@ -8,8 +8,8 @@ import org.springframework.security.crypto.password.{NoOpPasswordEncoder, Passwo
 @Configuration
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-  @Bean override def userDetailsService = new CustomUserDetailsService()
-
+  @Bean
+  override def userDetailsService = new CustomUserDetailsService()
 
   @throws[Exception]
   override protected def configure(http: HttpSecurity): Unit = {
@@ -19,8 +19,8 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/api/**").hasAuthority("USER")
       .antMatchers("/admin/**").hasAuthority("ADMIN")
       .anyRequest.authenticated()
-//    http.formLogin().loginPage("/login").permitAll()
   }
 
-  @Bean def passwordEncoder: PasswordEncoder = NoOpPasswordEncoder.getInstance
+  @Bean
+  def passwordEncoder: PasswordEncoder = NoOpPasswordEncoder.getInstance
 }

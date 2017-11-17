@@ -22,7 +22,7 @@ class CustomUserDetails(user: User) extends UserDetails{
   id = user.getId()
   username = user.getName()
   password = user.getPassword()
-  user.getAuthorities().stream().forEach(o => authorities.add(new GrantedAuthority {
+  user.getAuthorities().forEach(o => authorities.add(new GrantedAuthority {
     override def getAuthority: String = o.name()
   }))
 

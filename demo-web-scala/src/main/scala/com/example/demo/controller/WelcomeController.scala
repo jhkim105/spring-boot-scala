@@ -2,7 +2,6 @@ package com.example.demo.controller
 
 import com.example.demo.security.CustomUserDetails
 import org.slf4j.{Logger, LoggerFactory}
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.security.core.annotation.AuthenticationPrincipal
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -12,9 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping
 class WelcomeController {
 
   val log: Logger = LoggerFactory.getLogger(this.getClass);
-
-  @Value("${application.message:Hello World}")
-  private val message = "Hello World"
 
   @GetMapping(Array("/"))
   def welcome(model: Model, @AuthenticationPrincipal customUserDetails: CustomUserDetails): String = {
