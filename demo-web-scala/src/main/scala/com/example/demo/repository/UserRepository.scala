@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-trait UserRepository extends JpaRepository[User, java.lang.Long] {
+trait UserRepository extends JpaRepository[User, java.lang.Long] with UserRepositoryCustom{
   def findByUsername(username: String): User
 }
