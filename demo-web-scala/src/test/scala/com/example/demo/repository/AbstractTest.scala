@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(classOf[SpringRunner])
 @SpringBootTest
-class DemoWebScalaApplicationTest {
+abstract class AbstractTest {
 
   val log: Logger = LoggerFactory.getLogger(this.getClass)
 

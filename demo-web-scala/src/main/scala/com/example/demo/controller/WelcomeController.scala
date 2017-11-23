@@ -15,7 +15,7 @@ class WelcomeController {
   @GetMapping(Array("/"))
   def welcome(model: Model, @AuthenticationPrincipal customUserDetails: CustomUserDetails): String = {
     val message = "Hello Spring With Java"
-    log.debug("customUserDetails:{}" + customUserDetails)
+    log.debug("customUserDetails:{}", customUserDetails)
     model.addAttribute("message", message)
     model.addAttribute("currentUserDetail", customUserDetails)
     "welcome"

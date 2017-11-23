@@ -1,11 +1,9 @@
 package com.example.demo.repository
 
 import java.util
-import java.util.stream.Collectors
 import javax.persistence.{EntityManager, PersistenceContext}
 
 import com.example.demo.model.{QUser, User, UsernameEmail}
-import com.querydsl.core.Tuple
 import com.querydsl.jpa.impl.JPAQuery
 import org.slf4j.LoggerFactory
 

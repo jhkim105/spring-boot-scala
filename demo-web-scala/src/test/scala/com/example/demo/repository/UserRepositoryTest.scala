@@ -3,7 +3,7 @@ package com.example.demo.repository
 import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 
-class UserRepositoryTest extends DemoWebScalaApplicationTest {
+class UserRepositoryTest extends AbstractTest {
 
   @Autowired
   var userRepository:UserRepository = null
