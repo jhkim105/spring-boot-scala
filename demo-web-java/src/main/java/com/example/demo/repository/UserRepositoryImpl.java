@@ -6,6 +6,7 @@ import com.querydsl.jpa.impl.JPAQuery;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 public class UserRepositoryImpl implements UserRepositoryCustom {
 
@@ -20,5 +21,12 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     query.from(user).where(user.email.eq(email));
 
     return query.fetchOne();
+  }
+
+  @Override
+  public List<User> findActiveUsers() {
+    QUser user = QUser.user;
+    JPAQuery<User> query = new JPAQuery<>(entityManager);
+    return query.from(user).select(QUser.create(user.id, user.username, user.email)).fetch();
   }
 }

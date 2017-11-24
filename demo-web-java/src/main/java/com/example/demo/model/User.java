@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
+import com.querydsl.core.annotations.QueryProjection;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -20,6 +22,7 @@ import java.util.Set;
 @Entity
 @Table(name = "t_user")
 @Getter @Setter @ToString
+@NoArgsConstructor
 public class User {
 
   @Id
@@ -39,5 +42,12 @@ public class User {
   @Column(name = "authority", nullable = false)
   @Enumerated(EnumType.STRING)
   private Set<Authority> authorities = new HashSet<>();
+
+  @QueryProjection
+  public User(Long id, String username, String email) {
+    this.id = id;
+    this.username = username;
+    this.email = email;
+  }
 
 }
